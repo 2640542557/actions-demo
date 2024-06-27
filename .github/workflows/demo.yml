@@ -11,6 +11,11 @@ jobs:
     - name: 读取仓库内容
       uses: actions/checkout@v4
       
+    - name: 使用 Node.js V10.24.1这个版本
+      uses: actions/setup-node@v2
+      with:
+        node-version: 10.24.1
+      
     - name: 安装gitbook和项目打包
       run: |
         npm install gitbook-cli -g
