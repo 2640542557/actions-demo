@@ -16,10 +16,17 @@ jobs:
       with:
         node-version: 10.24.1
       
-    - name: 安装gitbook和项目打包
+    - name: 安装gitbook和相关依赖
       run: |
         npm install gitbook-cli -g
         npm install gitbook-plugin-lightbox
         gitbook install
-        gitbook build
+      
+    - name: 项目打包
+      run: gitbook build
     
+    - name: 部署
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: build
