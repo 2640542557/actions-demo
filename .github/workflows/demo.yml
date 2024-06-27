@@ -2,6 +2,9 @@ name: 打包gitbook项目
 
 on: push
 
+permissions:
+  contents: write
+  
 jobs:
   gitbook-build:
     name: gitbook-build工作
