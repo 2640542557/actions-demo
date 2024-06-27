@@ -19,6 +19,7 @@ jobs:
     - name: 安装gitbook和项目打包
       run: |
         npm install gitbook-cli -g
+        npm install gitbook-plugin-lightbox
         gitbook install
         gitbook build
     
