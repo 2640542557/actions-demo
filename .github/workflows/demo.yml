@@ -59,6 +59,7 @@ jobs:
          curl -o linux.sh "https://get.docker.com"
          mkdir shell
          cp linux.sh ./shell
+         date
 
     - name: 连接sftp服务器
       uses: Dylan700/sftp-upload-action@latest
